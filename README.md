@@ -22,7 +22,7 @@ pod 'GMLFoundationExtension'
 
 ## Author
 
-ym, ym@yuemei.com
+GML, 1042807191@qq.com
 
 ## License
 
