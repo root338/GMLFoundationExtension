@@ -1,0 +1,6 @@
+framework module Pods_GMLFoundationExtension_Tests {
+  umbrella header "Pods-GMLFoundationExtension_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

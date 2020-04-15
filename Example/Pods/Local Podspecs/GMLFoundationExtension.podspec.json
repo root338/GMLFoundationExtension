@@ -1,0 +1,22 @@
+{
+  "name": "GMLFoundationExtension",
+  "version": "0.1.0",
+  "summary": "A short description of GMLFoundationExtension.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ym/GMLFoundationExtension",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ym": "ym@yuemei.com"
+  },
+  "source": {
+    "git": "https://github.com/ym/GMLFoundationExtension.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GMLFoundationExtension/Classes/**/*"
+}

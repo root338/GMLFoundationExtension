@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0A15DEA7A0AAB6E12027EF7F /* Pods_GMLFoundationExtension_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FE90A9775E048E529E7BA7 /* Pods_GMLFoundationExtension_Example.framework */; };
+		1814AE472446D917003FDE51 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814AE462446D917003FDE51 /* main.swift */; };
+		1814AE4F2446FA6B003FDE51 /* GMLArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814AE4B2446FA6A003FDE51 /* GMLArrayExtension.swift */; };
+		1814AE502446FA6B003FDE51 /* GMLArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814AE4B2446FA6A003FDE51 /* GMLArrayExtension.swift */; };
+		1814AE512446FA6B003FDE51 /* GMLDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814AE4C2446FA6A003FDE51 /* GMLDictionaryExtension.swift */; };
+		1814AE522446FA6B003FDE51 /* GMLDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814AE4C2446FA6A003FDE51 /* GMLDictionaryExtension.swift */; };
+		1814AE532446FA6B003FDE51 /* Double+PriceCalculateRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814AE4D2446FA6A003FDE51 /* Double+PriceCalculateRules.swift */; };
+		1814AE542446FA6B003FDE51 /* Double+PriceCalculateRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814AE4D2446FA6A003FDE51 /* Double+PriceCalculateRules.swift */; };
+		1814AE552446FA6B003FDE51 /* GMLStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814AE4E2446FA6B003FDE51 /* GMLStringExtension.swift */; };
+		1814AE562446FA6B003FDE51 /* GMLStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814AE4E2446FA6B003FDE51 /* GMLStringExtension.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -27,11 +36,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1814AE422446D917003FDE51 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		029B663662DA0D549BE6E21D /* Pods-GMLFoundationExtension_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMLFoundationExtension_Tests.release.xcconfig"; path = "Target Support Files/Pods-GMLFoundationExtension_Tests/Pods-GMLFoundationExtension_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		16DB7D110F966ADB3A5847AA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		37C6CB4B39F6A5A308941527 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		5DBE95A65CA1E93D42948DC7 /* GMLFoundationExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GMLFoundationExtension.podspec; path = ../GMLFoundationExtension.podspec; sourceTree = "<group>"; };
+		16DB7D110F966ADB3A5847AA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1814AE442446D917003FDE51 /* GMLFoundataionTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GMLFoundataionTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1814AE462446D917003FDE51 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1814AE4B2446FA6A003FDE51 /* GMLArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLArrayExtension.swift; sourceTree = "<group>"; };
+		1814AE4C2446FA6A003FDE51 /* GMLDictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLDictionaryExtension.swift; sourceTree = "<group>"; };
+		1814AE4D2446FA6A003FDE51 /* Double+PriceCalculateRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+PriceCalculateRules.swift"; sourceTree = "<group>"; };
+		1814AE4E2446FA6B003FDE51 /* GMLStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLStringExtension.swift; sourceTree = "<group>"; };
+		37C6CB4B39F6A5A308941527 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5DBE95A65CA1E93D42948DC7 /* GMLFoundationExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GMLFoundationExtension.podspec; path = ../GMLFoundationExtension.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* GMLFoundationExtension_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMLFoundationExtension_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1814AE412446D917003FDE51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,12 +103,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1814AE372446D8A6003FDE51 /* GMLFoundationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				1814AE382446D8A6003FDE51 /* Classes */,
+				1814AE3B2446D8A6003FDE51 /* Assets */,
+			);
+			name = GMLFoundationExtension;
+			path = ../GMLFoundationExtension;
+			sourceTree = "<group>";
+		};
+		1814AE382446D8A6003FDE51 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1814AE4B2446FA6A003FDE51 /* GMLArrayExtension.swift */,
+				1814AE4D2446FA6A003FDE51 /* Double+PriceCalculateRules.swift */,
+				1814AE4C2446FA6A003FDE51 /* GMLDictionaryExtension.swift */,
+				1814AE4E2446FA6B003FDE51 /* GMLStringExtension.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1814AE3B2446D8A6003FDE51 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		1814AE452446D917003FDE51 /* GMLFoundataionTest */ = {
+			isa = PBXGroup;
+			children = (
+				1814AE462446D917003FDE51 /* main.swift */,
+			);
+			path = GMLFoundataionTest;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				1814AE372446D8A6003FDE51 /* GMLFoundationExtension */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for GMLFoundationExtension */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				1814AE452446D917003FDE51 /* GMLFoundataionTest */,
 				607FACD11AFB9204008FA782 /* Products */,
 				6BC489937F3E8B5E81C571EA /* Pods */,
 				A1BBA1C010A3CA8D57FDFD70 /* Frameworks */,
@@ -86,6 +158,7 @@
 			children = (
 				607FACD01AFB9204008FA782 /* GMLFoundationExtension_Example.app */,
 				607FACE51AFB9204008FA782 /* GMLFoundationExtension_Tests.xctest */,
+				1814AE442446D917003FDE51 /* GMLFoundataionTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,7 +220,6 @@
 				DE35E9C6F1BEFD40F1B52E4E /* Pods-GMLFoundationExtension_Tests.debug.xcconfig */,
 				029B663662DA0D549BE6E21D /* Pods-GMLFoundationExtension_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -163,6 +235,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1814AE432446D917003FDE51 /* GMLFoundataionTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1814AE482446D917003FDE51 /* Build configuration list for PBXNativeTarget "GMLFoundataionTest" */;
+			buildPhases = (
+				1814AE402446D917003FDE51 /* Sources */,
+				1814AE412446D917003FDE51 /* Frameworks */,
+				1814AE422446D917003FDE51 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GMLFoundataionTest;
+			productName = GMLFoundataionTest;
+			productReference = 1814AE442446D917003FDE51 /* GMLFoundataionTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		607FACCF1AFB9204008FA782 /* GMLFoundationExtension_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "GMLFoundationExtension_Example" */;
@@ -208,10 +297,15 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					1814AE432446D917003FDE51 = {
+						CreatedOnToolsVersion = 11.4;
+						DevelopmentTeam = 29W9687J6A;
+						ProvisioningStyle = Automatic;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
@@ -228,6 +322,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -238,6 +333,7 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* GMLFoundationExtension_Example */,
 				607FACE41AFB9204008FA782 /* GMLFoundationExtension_Tests */,
+				1814AE432446D917003FDE51 /* GMLFoundataionTest */,
 			);
 		};
 /* End PBXProject section */
@@ -348,12 +444,28 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1814AE402446D917003FDE51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1814AE472446D917003FDE51 /* main.swift in Sources */,
+				1814AE502446FA6B003FDE51 /* GMLArrayExtension.swift in Sources */,
+				1814AE542446FA6B003FDE51 /* Double+PriceCalculateRules.swift in Sources */,
+				1814AE562446FA6B003FDE51 /* GMLStringExtension.swift in Sources */,
+				1814AE522446FA6B003FDE51 /* GMLDictionaryExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1814AE512446FA6B003FDE51 /* GMLDictionaryExtension.swift in Sources */,
+				1814AE552446FA6B003FDE51 /* GMLStringExtension.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				1814AE532446FA6B003FDE51 /* Double+PriceCalculateRules.swift in Sources */,
+				1814AE4F2446FA6B003FDE51 /* GMLArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +507,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1814AE492446D917003FDE51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 29W9687J6A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1814AE4A2446D917003FDE51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29W9687J6A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -567,6 +728,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1814AE482446D917003FDE51 /* Build configuration list for PBXNativeTarget "GMLFoundataionTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1814AE492446D917003FDE51 /* Debug */,
+				1814AE4A2446D917003FDE51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "GMLFoundationExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
