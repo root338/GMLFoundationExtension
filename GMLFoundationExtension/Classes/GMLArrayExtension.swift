@@ -42,13 +42,12 @@ extension Array {
 extension Array where Element : Equatable {
     @discardableResult
     mutating func ml_remove(at obj: Element) -> Element? {
-        
-        if self.contains(obj) {
-            for (index, targetObj) in self.enumerated() {
-                if targetObj == obj {
-                    return self.remove(at: index)
-                }
+        guard self.contains(obj) else { return nil }
+        for (index, targetObj) in self.enumerated() {
+            if targetObj != obj {
+                continue
             }
+            return self.remove(at: index)
         }
         return nil
     }
@@ -62,5 +61,19 @@ extension Array where Element : Equatable {
             }
         }
         return removeObjs
+    }
+    
+    func ml_index(at obj: Element) -> Index? {
+        return self.firstIndex {
+            return $0 == obj
+        }
+    }
+}
+
+extension Array where Element : NSObjectProtocol {
+    func ml_index(at obj: Element) -> Index? {
+        return self.firstIndex {
+            return $0.isEqual(obj)
+        }
     }
 }
