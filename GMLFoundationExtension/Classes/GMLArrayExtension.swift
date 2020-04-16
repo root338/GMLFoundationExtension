@@ -8,19 +8,18 @@
 
 import Foundation
 
-enum CGArrayError : Error {
+public enum CGArrayError : Error {
     case index
-    
 }
 
 extension Array {
-    func ml_toJSONString(encoding: String.Encoding = String.Encoding.utf8) throws -> String? {
+    public func ml_toJSONString(encoding: String.Encoding = String.Encoding.utf8) throws -> String? {
         let data = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
         return String(data: data, encoding: .utf8)
     }
 }
 
-extension Array {
+public extension Array {
     
     func subarray(startIndex: Int, endIndex: Int) throws -> Array {
         guard startIndex < self.count else {
@@ -39,7 +38,7 @@ extension Array {
     }
 }
 
-extension Array where Element : Equatable {
+public extension Array where Element : Equatable {
     @discardableResult
     mutating func ml_remove(at obj: Element) -> Element? {
         guard self.contains(obj) else { return nil }
@@ -70,7 +69,7 @@ extension Array where Element : Equatable {
     }
 }
 
-extension Array where Element : NSObjectProtocol {
+public extension Array where Element : NSObjectProtocol {
     func ml_index(at obj: Element) -> Index? {
         return self.firstIndex {
             return $0.isEqual(obj)
