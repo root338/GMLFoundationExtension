@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GMLFoundationExtension'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'GMLFoundationExtension 是在 Foundataion framework 的基础上扩展一些功能'
   s.swift_versions   = '5.0'
 
