@@ -56,6 +56,7 @@ public extension Array {
     
     /// 替换数组中指定对象
     /// - Throws: 返回 ml_index(at:) 方法异常
+    @discardableResult
     mutating func ml_replace(_ obj: Element, replaceObj: Element) throws -> Element? {
         guard let index = try ml_index(at: obj) else { return nil }
         replaceSubrange(index..<index+1, with: [replaceObj])
@@ -67,6 +68,7 @@ public extension Array {
     ///   - obj: 数组中的要被替换的对象
     ///   - replaceCollection: 替换的对象
     /// - Throws: 返回 ml_index(at:) 方法异常
+    @discardableResult
     mutating func ml_replace(_ obj: Element, replaceCollection: [Element]) throws -> [Element]? {
         guard let index = try ml_index(at: obj) else { return nil }
         replaceSubrange(index..<index+1, with: replaceCollection)
