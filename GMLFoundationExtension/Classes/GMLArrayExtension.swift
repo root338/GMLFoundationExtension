@@ -8,8 +8,12 @@
 
 import Foundation
 
+/// 扩展数组方法的错误信息
 public enum CGArrayError : Error {
+    /// 索引越界
     case index
+    /// 类型不支持
+    case typeNoSupport(message: String)
 }
 
 public extension Array {
@@ -37,22 +41,34 @@ public extension Array {
         return try self.subarray(startIndex: range.location, endIndex: range.location + range.length)
     }
     
-    func ml_index(at obj: Any) -> Int? {
+    /// 获取指定对象在数组中的位置
+    /// 注意：仅对实现 NSObjectProtocol 协议的对象进行处理
+    /// - Parameter obj: 指定对象, swift 中有些支持桥接所以使用 Any 类型
+    /// - Throws: 不支持类型数组报 CGArrayError.typeNoSupport(message:) 异常
+    func ml_index(at obj: Any) throws -> Int? {
         guard let list = self as? [NSObjectProtocol] else {
-            return nil
+            throw CGArrayError.typeNoSupport(message: "请使用 firstIndex(where:) 自定义实现")
         }
         return list.firstIndex {
             return $0.isEqual(obj)
         }
     }
     
-    mutating func ml_replace(_ obj: Element, replaceObj: Element) -> Element? {
-        guard let index = ml_index(at: obj) else { return nil }
+    /// 替换数组中指定对象
+    /// - Throws: 返回 ml_index(at:) 方法异常
+    mutating func ml_replace(_ obj: Element, replaceObj: Element) throws -> Element? {
+        guard let index = try ml_index(at: obj) else { return nil }
         replaceSubrange(index..<index+1, with: [replaceObj])
         return replaceObj
     }
-    mutating func ml_replace(_ obj: Element, replaceCollection: [Element]) -> [Element]? {
-        guard let index = ml_index(at: obj) else { return nil }
+    
+    /// 替换数组中指定对象
+    /// - Parameters:
+    ///   - obj: 数组中的要被替换的对象
+    ///   - replaceCollection: 替换的对象
+    /// - Throws: 返回 ml_index(at:) 方法异常
+    mutating func ml_replace(_ obj: Element, replaceCollection: [Element]) throws -> [Element]? {
+        guard let index = try ml_index(at: obj) else { return nil }
         replaceSubrange(index..<index+1, with: replaceCollection)
         return replaceCollection
     }
@@ -82,10 +98,10 @@ public extension Array where Element : Equatable {
         return removeObjs
     }
     
-    func ml_index(at obj: Element) -> Index? {
-        return self.firstIndex {
-            return $0 == obj
-        }
+    /// 获取数组对象位置
+    /// 请直接使用 firstIndex(of:)
+    func ml_index(at obj: Element) -> Int? {
+        return firstIndex(of: obj)
     }
 }
 
