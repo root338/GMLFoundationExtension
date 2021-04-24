@@ -18,9 +18,8 @@ public enum GMLConstantString : String {
 public extension String {
     
     /// 复制自身指定次数
-    func copy(count: UInt) -> Self? {
-        if count == 0 { return nil }
-        if count == 1 { return self }
+    func copy(count: Int) -> Self {
+        if count <= 1 { return self }
         var newStr = String()
         for _ in 0 ..< count {
             newStr += self

@@ -20,25 +20,61 @@ public enum CGSpliceStringType : Int {
     case nilAndEmptyEndSplice
 }
 
-//enum CGSpliceNumberStringType : Int {
-//    case
-//}
-
 //MARK:- substirng
 public extension String {
     func substring(range: NSRange) -> String? {
         guard let r = Range(range, in: self) else { return nil }
         return String(self[r.lowerBound..<r.upperBound])
     }
-    func substring(from markStr: String) -> String? {
+    func substring(from markStr: String, includeMark: Bool = true) -> String? {
         guard let range = range(of: markStr) else { return nil }
-        return String(self[range.lowerBound ..< self.endIndex])
+        return String(self[(includeMark ? range.lowerBound : range.upperBound) ..< self.endIndex])
     }
-    func substring(to markStr: String) -> String? {
+    func substring(from index: Int) -> String? {
+        guard let r = Range(NSMakeRange(index, self.count - index), in: self) else { return nil }
+        return String(self[r.lowerBound..<r.upperBound])
+    }
+    func substring(to markStr: String, includeMark: Bool = true) -> String? {
         guard let range = range(of: markStr) else { return nil }
-        return String(self[self.startIndex ..< range.lowerBound])
+        return String(self[self.startIndex ..< (includeMark ? range.upperBound : range.lowerBound)])
+    }
+    func substring(to index: Int) -> String? {
+        guard let r = Range(NSMakeRange(0, index), in: self) else { return nil }
+        return String(self[r.lowerBound..<r.upperBound])
     }
     
+    func substring(from fromIndex: Int?, to toIndex: Int?) -> String? {
+        if fromIndex == nil && toIndex == nil { return self }
+        if fromIndex == nil { return substring(to: toIndex!) }
+        if toIndex == nil { return substring(from: fromIndex!) }
+        let start = fromIndex!
+        let end = toIndex!
+        if start < 0 || end <= start { return nil }
+        guard let range = Range(NSMakeRange(start, end - start), in: self) else { return nil }
+        return String(self[range.lowerBound..<range.upperBound])
+    }
+    
+    /// 获取子字符串
+    /// - Parameters:
+    ///   - startOffset: 从开始位置偏移的索引
+    ///   - endOffset: 从结束位置偏移的索引
+    func substring(startOffset: Int, endOffset: Int) -> String? {
+        let startIndex = startOffset
+        let endIndex = self.count - endOffset;
+        if startIndex < 0 || endIndex < 0 || endIndex <= startIndex { return nil }
+        guard let range = Range(NSMakeRange(startIndex, endIndex - startIndex), in: self) else { return nil }
+        return String(self[range.lowerBound ..< range.upperBound])
+    }
+}
+
+//MARK:-
+public extension String {
+    var rangeAll: NSRange {
+        return NSMakeRange(0, self.count)
+    }
+    var deleteBlankCharacter : String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }
 
 //MARK:- 拼接字符串
