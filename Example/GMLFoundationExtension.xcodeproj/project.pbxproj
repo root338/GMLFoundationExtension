@@ -31,6 +31,15 @@
 		6D3EB9B62634266200111706 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EB99F2634266200111706 /* URLExtension.swift */; };
 		6D3EB9B72634266200111706 /* GMLArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EB9A12634266200111706 /* GMLArrayExtension.swift */; };
 		6D3EB9B82634266200111706 /* GMLArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EB9A12634266200111706 /* GMLArrayExtension.swift */; };
+		6D3EBA0726343CDC00111706 /* GMLAttributesKeyDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EBA0026343CDC00111706 /* GMLAttributesKeyDefines.swift */; };
+		6D3EBA0826343CDC00111706 /* GMLAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EBA0126343CDC00111706 /* GMLAttributesBuilder.swift */; };
+		6D3EBA0926343CDC00111706 /* GMLAttributedStringDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EBA0226343CDC00111706 /* GMLAttributedStringDefines.swift */; };
+		6D3EBA0A26343CDC00111706 /* GMLRichTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EBA0326343CDC00111706 /* GMLRichTextBuilder.swift */; };
+		6D3EBA0B26343CDC00111706 /* GMLAttributesBuilderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EBA0426343CDC00111706 /* GMLAttributesBuilderExtension.swift */; };
+		6D3EBA0C26343CDC00111706 /* GMLDictionaryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EBA0526343CDC00111706 /* GMLDictionaryAttributes.swift */; };
+		6D3EBA0D26343CDC00111706 /* GMLAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EBA0626343CDC00111706 /* GMLAttributedStringExtension.swift */; };
+		6D3EBA142634408B00111706 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EBA122634408B00111706 /* ColorExtension.swift */; };
+		6D3EBA152634408B00111706 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EBA132634408B00111706 /* FontExtension.swift */; };
 		8DC25EB67B9CA36BEB63EAF0 /* Pods_GMLFoundationExtension_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5F16A2EF19349DC8027B33 /* Pods_GMLFoundationExtension_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +90,15 @@
 		6D3EB99D2634266200111706 /* FileManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
 		6D3EB99F2634266200111706 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		6D3EB9A12634266200111706 /* GMLArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLArrayExtension.swift; sourceTree = "<group>"; };
+		6D3EBA0026343CDC00111706 /* GMLAttributesKeyDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLAttributesKeyDefines.swift; sourceTree = "<group>"; };
+		6D3EBA0126343CDC00111706 /* GMLAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLAttributesBuilder.swift; sourceTree = "<group>"; };
+		6D3EBA0226343CDC00111706 /* GMLAttributedStringDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLAttributedStringDefines.swift; sourceTree = "<group>"; };
+		6D3EBA0326343CDC00111706 /* GMLRichTextBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLRichTextBuilder.swift; sourceTree = "<group>"; };
+		6D3EBA0426343CDC00111706 /* GMLAttributesBuilderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLAttributesBuilderExtension.swift; sourceTree = "<group>"; };
+		6D3EBA0526343CDC00111706 /* GMLDictionaryAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLDictionaryAttributes.swift; sourceTree = "<group>"; };
+		6D3EBA0626343CDC00111706 /* GMLAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLAttributedStringExtension.swift; sourceTree = "<group>"; };
+		6D3EBA122634408B00111706 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		6D3EBA132634408B00111706 /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		78622E4F3DF192884F0626DC /* Pods-GMLFoundationExtension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMLFoundationExtension_Example.debug.xcconfig"; path = "Target Support Files/Pods-GMLFoundationExtension_Example/Pods-GMLFoundationExtension_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CAD7465B396578FEFFCF2998 /* Pods-GMLFoundationExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMLFoundationExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-GMLFoundationExtension_Example/Pods-GMLFoundationExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DE35E9C6F1BEFD40F1B52E4E /* Pods-GMLFoundationExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMLFoundationExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GMLFoundationExtension_Tests/Pods-GMLFoundationExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +146,8 @@
 		1814AE382446D8A6003FDE51 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6D3EBA112634407300111706 /* App+UI */,
+				6D3EB9FF26343CDC00111706 /* AttributedExtension */,
 				6D3EB9DB263427C500111706 /* NumberExtension */,
 				6D3EB9A02634266200111706 /* SetExtension */,
 				6D3EB99C2634266200111706 /* FileManagerExtension */,
@@ -277,6 +297,29 @@
 				1814AE4D2446FA6A003FDE51 /* Double+PriceCalculateRules.swift */,
 			);
 			path = NumberExtension;
+			sourceTree = "<group>";
+		};
+		6D3EB9FF26343CDC00111706 /* AttributedExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6D3EBA0026343CDC00111706 /* GMLAttributesKeyDefines.swift */,
+				6D3EBA0126343CDC00111706 /* GMLAttributesBuilder.swift */,
+				6D3EBA0226343CDC00111706 /* GMLAttributedStringDefines.swift */,
+				6D3EBA0326343CDC00111706 /* GMLRichTextBuilder.swift */,
+				6D3EBA0426343CDC00111706 /* GMLAttributesBuilderExtension.swift */,
+				6D3EBA0526343CDC00111706 /* GMLDictionaryAttributes.swift */,
+				6D3EBA0626343CDC00111706 /* GMLAttributedStringExtension.swift */,
+			);
+			path = AttributedExtension;
+			sourceTree = "<group>";
+		};
+		6D3EBA112634407300111706 /* App+UI */ = {
+			isa = PBXGroup;
+			children = (
+				6D3EBA122634408B00111706 /* ColorExtension.swift */,
+				6D3EBA132634408B00111706 /* FontExtension.swift */,
+			);
+			path = "App+UI";
 			sourceTree = "<group>";
 		};
 		A1BBA1C010A3CA8D57FDFD70 /* Frameworks */ = {
@@ -502,16 +545,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D3EBA0926343CDC00111706 /* GMLAttributedStringDefines.swift in Sources */,
+				6D3EBA0726343CDC00111706 /* GMLAttributesKeyDefines.swift in Sources */,
 				6D3EB9AF2634266200111706 /* GMLStringPathExtension.swift in Sources */,
+				6D3EBA142634408B00111706 /* ColorExtension.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				6D3EBA152634408B00111706 /* FontExtension.swift in Sources */,
+				6D3EBA0C26343CDC00111706 /* GMLDictionaryAttributes.swift in Sources */,
 				6D3EB9B52634266200111706 /* URLExtension.swift in Sources */,
 				6D3EB9AD2634266200111706 /* StringExtension.swift in Sources */,
 				6D3EB9B12634266200111706 /* GMLDictionaryExtension.swift in Sources */,
+				6D3EBA0B26343CDC00111706 /* GMLAttributesBuilderExtension.swift in Sources */,
 				6D3EB9B72634266200111706 /* GMLArrayExtension.swift in Sources */,
 				6D3EB9AB2634266200111706 /* GMLStringExtension.swift in Sources */,
+				6D3EBA0D26343CDC00111706 /* GMLAttributedStringExtension.swift in Sources */,
 				6D3EB9B32634266200111706 /* FileManagerExtension.swift in Sources */,
+				6D3EBA0A26343CDC00111706 /* GMLRichTextBuilder.swift in Sources */,
 				1814AE532446FA6B003FDE51 /* Double+PriceCalculateRules.swift in Sources */,
+				6D3EBA0826343CDC00111706 /* GMLAttributesBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
