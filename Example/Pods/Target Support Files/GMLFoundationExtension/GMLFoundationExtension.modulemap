@@ -1,6 +1,0 @@
-framework module GMLFoundationExtension {
-  umbrella header "GMLFoundationExtension-umbrella.h"
-
-  export *
-  module * { export * }
-}

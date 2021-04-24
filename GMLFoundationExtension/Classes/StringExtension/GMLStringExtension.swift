@@ -14,7 +14,7 @@ import Foundation
 /// - isEmptyEndSplice: 字符串长度为 0 终止字符串拼接
 /// - ignoreAllEmpty: 忽略所有的字符串长度为 0 的字符串
 /// - nilAndEmptyEndSplice: 字符串空对象或字符串长度为 0 终止字符串拼接
-enum CGSpliceStringType : Int {
+public enum CGSpliceStringType : Int {
     case isEmptyEndSplice
     case ignoreAllEmpty
     case nilAndEmptyEndSplice
@@ -24,8 +24,25 @@ enum CGSpliceStringType : Int {
 //    case
 //}
 
+//MARK:- substirng
+public extension String {
+    func substring(range: NSRange) -> String? {
+        guard let r = Range(range, in: self) else { return nil }
+        return String(self[r.lowerBound..<r.upperBound])
+    }
+    func substring(from markStr: String) -> String? {
+        guard let range = range(of: markStr) else { return nil }
+        return String(self[range.lowerBound ..< self.endIndex])
+    }
+    func substring(to markStr: String) -> String? {
+        guard let range = range(of: markStr) else { return nil }
+        return String(self[self.startIndex ..< range.lowerBound])
+    }
+    
+}
+
 //MARK:- 拼接字符串
-extension String {
+public extension String {
     
     static func spliceString(spliceType: CGSpliceStringType, strs: String?...) -> String? {
         

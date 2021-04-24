@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'GMLFoundationExtension_Example' do
-  pod 'GMLFoundationExtension', :path => '../'
+#  pod 'GMLFoundationExtension', :path => '../'
 
   target 'GMLFoundationExtension_Tests' do
     inherit! :search_paths
