@@ -24,7 +24,7 @@ public enum CGSpliceStringType : Int {
 public extension String {
     func substring(range: NSRange) -> String? {
         guard let r = Range(range, in: self) else { return nil }
-        return String(self[r.lowerBound..<r.upperBound])
+        return String(self[r])
     }
     func substring(from markStr: String, includeMark: Bool = true) -> String? {
         guard let range = range(of: markStr) else { return nil }
@@ -32,7 +32,7 @@ public extension String {
     }
     func substring(from index: Int) -> String? {
         guard let r = Range(NSMakeRange(index, self.count - index), in: self) else { return nil }
-        return String(self[r.lowerBound..<r.upperBound])
+        return String(self[r])
     }
     func substring(to markStr: String, includeMark: Bool = true) -> String? {
         guard let range = range(of: markStr) else { return nil }
@@ -40,7 +40,7 @@ public extension String {
     }
     func substring(to index: Int) -> String? {
         guard let r = Range(NSMakeRange(0, index), in: self) else { return nil }
-        return String(self[r.lowerBound..<r.upperBound])
+        return String(self[r])
     }
     
     func substring(from fromIndex: Int?, to toIndex: Int?) -> String? {
@@ -51,7 +51,7 @@ public extension String {
         let end = toIndex!
         if start < 0 || end <= start { return nil }
         guard let range = Range(NSMakeRange(start, end - start), in: self) else { return nil }
-        return String(self[range.lowerBound..<range.upperBound])
+        return String(self[range])
     }
     
     /// 获取子字符串
@@ -63,7 +63,7 @@ public extension String {
         let endIndex = self.count - endOffset;
         if startIndex < 0 || endIndex < 0 || endIndex <= startIndex { return nil }
         guard let range = Range(NSMakeRange(startIndex, endIndex - startIndex), in: self) else { return nil }
-        return String(self[range.lowerBound ..< range.upperBound])
+        return String(self[range])
     }
 }
 
@@ -194,7 +194,7 @@ public extension String {
             return nil
         }
         guard let range = Range(NSMakeRange(0, index), in: self) else { return nil }
-        let substring = String(self[range.lowerBound..<range.upperBound])
+        let substring = String(self[range])
         self.removeSubrange(range)
         return (range, substring)
     }
@@ -206,7 +206,7 @@ public extension String {
             return nil
         }
         guard let range = Range(NSMakeRange(index, self.count - index), in: self) else { return nil }
-        let substring = String(self[range.lowerBound..<range.upperBound])
+        let substring = String(self[range])
         self.removeSubrange(range)
         return (range, substring)
     }
@@ -220,6 +220,10 @@ public extension String {
     }
     mutating func remove(range: NSRange) {
         guard let range = Range(range, in: self) else { return }
+        self.removeSubrange(range)
+    }
+    mutating func remove(substring: String) {
+        guard let range = self.range(of: substring) else { return }
         self.removeSubrange(range)
     }
     
