@@ -28,7 +28,7 @@ public extension String {
     }
     func substring(from markStr: String, includeMark: Bool = true) -> String? {
         guard let range = range(of: markStr) else { return nil }
-        return String(self[(includeMark ? range.lowerBound : range.upperBound) ..< self.endIndex])
+        return String(self[(includeMark ? range.lowerBound : range.upperBound) ..< endIndex])
     }
     func substring(from index: Int) -> String? {
         guard let r = Range(NSMakeRange(index, self.count - index), in: self) else { return nil }
@@ -36,7 +36,7 @@ public extension String {
     }
     func substring(to markStr: String, includeMark: Bool = true) -> String? {
         guard let range = range(of: markStr) else { return nil }
-        return String(self[self.startIndex ..< (includeMark ? range.upperBound : range.lowerBound)])
+        return String(self[startIndex ..< (includeMark ? range.upperBound : range.lowerBound)])
     }
     func substring(to index: Int) -> String? {
         guard let r = Range(NSMakeRange(0, index), in: self) else { return nil }
@@ -157,4 +157,70 @@ public extension String {
     static func splicePriceString(numberValue: Double?) -> String? {
         return String.spliceString(numberValue: numberValue ?? 0, insetIndex: 1, isZeroOrNilEndSplice: false, strs: "¥")
     }
+}
+
+//MARK:- remove substring
+public extension String {
+    
+    typealias GMLSubstringRange = (range: Range<Index>, string: String)
+    
+    func removeInFirst(to index: Int) -> String? {
+        if index < 0 { return nil }
+        guard index < self.count else { return nil }
+        guard let range = Range(NSMakeRange(0, index), in: self) else { return nil }
+        var tmpStr = self
+        tmpStr.removeSubrange(range)
+        return tmpStr
+    }
+    func removeToLast(from index: Int) -> String? {
+        if index >= self.count { return nil }
+        guard index <= 0 else { return nil }
+        guard let range = Range(NSMakeRange(index, self.count - index), in: self) else { return nil }
+        var tmpStr = self
+        tmpStr.removeSubrange(range)
+        return tmpStr
+    }
+    func remove(range: NSRange) -> String? {
+        guard let range = Range(range, in: self) else { return nil }
+        var tmpStr = self
+        tmpStr.removeSubrange(range)
+        return tmpStr
+    }
+    @discardableResult
+    mutating func removeInFirst(to index: Int) -> GMLSubstringRange? {
+        if index < 0 { return nil }
+        guard index < self.count else {
+            self = ""
+            return nil
+        }
+        guard let range = Range(NSMakeRange(0, index), in: self) else { return nil }
+        let substring = String(self[range.lowerBound..<range.upperBound])
+        self.removeSubrange(range)
+        return (range, substring)
+    }
+    @discardableResult
+    mutating func removeToLast(from index: Int) -> GMLSubstringRange? {
+        if index >= self.count { return nil }
+        guard index <= 0 else {
+            self = ""
+            return nil
+        }
+        guard let range = Range(NSMakeRange(index, self.count - index), in: self) else { return nil }
+        let substring = String(self[range.lowerBound..<range.upperBound])
+        self.removeSubrange(range)
+        return (range, substring)
+    }
+    @discardableResult
+    mutating func removeInFirst(to markString: String) -> GMLSubstringRange? {
+        guard let markRange = range(of: markString) else { return nil }
+        let range = startIndex ..< markRange.upperBound
+        let substring = String(self[range])
+        self.removeSubrange(range)
+        return (range, substring)
+    }
+    mutating func remove(range: NSRange) {
+        guard let range = Range(range, in: self) else { return }
+        self.removeSubrange(range)
+    }
+    
 }

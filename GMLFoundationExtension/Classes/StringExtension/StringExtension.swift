@@ -19,7 +19,8 @@ public extension String {
     
     /// 复制自身指定次数
     func copy(count: Int) -> Self {
-        if count <= 1 { return self }
+        if count <= 0 { return "" }
+        if count == 1 { return self }
         var newStr = String()
         for _ in 0 ..< count {
             newStr += self
