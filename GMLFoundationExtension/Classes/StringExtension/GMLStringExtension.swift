@@ -186,6 +186,16 @@ public extension String {
         tmpStr.removeSubrange(range)
         return tmpStr
     }
+    func remove(pattern: String, range: NSRange? = nil) throws -> String {
+        let re = try NSRegularExpression(pattern: pattern)
+        let results = re.matches(in: self, options: [], range: range ?? NSMakeRange(0, self.count))
+        var resultStr = self
+        for result in results.reversed() {
+            guard let range = Range(result.range, in: resultStr) else { continue }
+            resultStr.removeSubrange(range)
+        }
+        return resultStr
+    }
     @discardableResult
     mutating func removeInFirst(to index: Int) -> GMLSubstringRange? {
         if index < 0 { return nil }
@@ -226,5 +236,4 @@ public extension String {
         guard let range = self.range(of: substring) else { return }
         self.removeSubrange(range)
     }
-    
 }
